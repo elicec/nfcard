@@ -17,6 +17,7 @@ package com.sinpo.xnfc.nfc.reader;
 
 import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
+import android.nfc.tech.MifareClassic;
 import android.nfc.tech.NfcF;
 import android.os.AsyncTask;
 
@@ -63,6 +64,11 @@ public final class ReaderManager extends AsyncTask<Tag, SPEC.EVENT, Card> {
 			publishProgress(SPEC.EVENT.READING);
 
 			card.setProperty(SPEC.PROP.ID, Util.toHexString(tag.getId()));
+			
+			final MifareClassic mi=MifareClassic.get(tag);
+			if(mi!=null){
+				MiReader.readCard(mi,card);
+			}
 
 			final IsoDep isodep = IsoDep.get(tag);
 			if (isodep != null)

@@ -1,0 +1,19 @@
+# view AndroidManifest.xml #generated:28
+-keep class com.sinpo.xnfc.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:17
+-keep class com.sinpo.xnfc.ThisApplication { <init>(...); }
+
+# onClick res/layout/activity_main.xml #generated:43
+-keepclassmembers class * { *** onCopyPageContent(...); }
+
+# onClick res/layout/activity_main.xml #generated:51
+-keepclassmembers class * { *** onSharePageContent(...); }
+
+# onClick res/layout/activity_main.xml #generated:7
+-keepclassmembers class * { *** onSwitch2AboutPage(...); }
+
+# onClick res/layout/activity_main.xml #generated:35
+# onClick res/layout/activity_main.xml #generated:59
+-keepclassmembers class * { *** onSwitch2DefaultPage(...); }
+
